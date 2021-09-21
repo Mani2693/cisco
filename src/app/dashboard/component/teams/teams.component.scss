@@ -1,0 +1,36 @@
+.teams-table--wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.room-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 50px;
+    gap: 100px;
+}
+
+.create-room {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.form-class {
+    .submit-button {
+        margin-left: 20px;
+    }
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.cursor:hover {
+    color: rgb(189, 89, 89);
+}

@@ -1,0 +1,16 @@
+<div class="room-wrapper">
+    <span class="create-room">
+        <label>Create Room</label>
+        <form class="form-class" [formGroup]="teamsForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="title">Title</mat-label>
+                <input matInput id="title" type="text" formControlName="name">
+            </mat-form-field>
+            <button mat-button type="submit" class="submit-button" [disabled]="!teamsForm.valid">Submit</button>
+        </form>
+    </span>
+    <mat-spinner *ngIf="loader"></mat-spinner>
+    <app-table [dataSource]="teams" [displayedColumns]="displayColumns" (remove)="onRemove($event)" (details)="viewDetails($event)" *ngIf="!loader"></app-table>
+    <app-table [dataSource]="details" [displayedColumns]="detailsDisplayCol" *ngIf="details.length"></app-table> 
+</div>
+
